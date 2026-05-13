@@ -1,0 +1,67 @@
+
+#keys
+{
+    top: 120px;
+    position: absolute;
+
+    display:grid; 
+    grid-template-columns: repeat(4, 1fr);
+    height: 50px;
+    width: 25px;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+#milk
+{   color: red;
+    font-family: 'Arial', sans-serif;
+    position: absolute; 
+    bottom: -150px;
+    right: 50px;
+
+    font-size: 34px;
+    font-weight: bold;
+    
+}
+
+body
+{
+
+    flex-direction: column; /* Ensure the body is a flex container with column direction */
+
+  
+
+
+    display: flex; /* Make the body a flex container */
+    justify-content: center; /* Center horizontally */
+    align-items: flex-start; /* Align items to the bottom */
+    
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+
+    background-image: url('maria.jpg'); /* Ảnh của bạn */
+    background-color: rgb(242, 236, 236); /* Optional: Add a semi-transparent overlay */
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
+
+    filter: blur(5px); /* Lệnh làm mờ ở đây */
+    z-index: -1; /* Đẩy nó nằm dưới cùng */
+    transform: scale(1.1); /* Phóng to một chút để không bị lộ viền trắng khi mờ */
+}
+
+.checkbox-group {
+    
+    white-space: nowrap; /* Ép tất cả chữ phải nằm trên 1 hàng */
+    justify-content: space-around; /* Căn đều khoảng cách giữa các cụm "Ghi nhớ đăng nhập" */
+    width: 100%; /* Đảm bảo chiều rộng đủ lớn để chữ không bị ép */
+    gap: 20px;   /* Khoảng cách giữa các cụm "Ghi nhớ đăng nhập" */
+    
+}
